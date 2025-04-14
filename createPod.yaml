@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: admin-pod
+  namespace: kubernetes-dashboard
+  labels:
+    app: admin-app
+spec:
+  serviceAccountName: admin-user
+  containers:
+    - name: admin-container
+      image: nginx
+      ports:
+      - containerPort: 80 
